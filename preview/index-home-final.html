@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>王睿晗 | Portfolio Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yesteryear&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#080808;--paper:#fff;--yellow:#fde245;--violet:#6b36c5;--soft:#f0f0f0}
+    *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper);color:var(--ink)}
+    body{font-family:"Zen Kaku Gothic New","PingFang SC",sans-serif}
+    header{height:82px;padding:18px 3.2vw 0;display:flex;justify-content:space-between;position:relative;z-index:50;background:rgba(255,255,255,.92)}
+    .signature{font:32px/1 "Yesteryear",cursive;transform:rotate(-3deg)}
+    nav{display:flex;gap:clamp(25px,3vw,56px);font-weight:700}nav a{color:inherit;text-decoration:none;padding-top:6px;position:relative}
+    nav a:after{content:"";position:absolute;left:0;right:100%;bottom:29px;height:2px;background:var(--violet);transition:right .3s}nav a:hover:after{right:0}
+    #hero{position:relative;height:calc(100svh - 82px);min-height:620px;overflow:hidden;cursor:crosshair;touch-action:none;isolation:isolate}
+    #hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(253,226,69,.16),transparent 34%),linear-gradient(110deg,transparent 0 70%,rgba(107,54,197,.04));pointer-events:none}
+    .hint{position:absolute;left:3.2vw;bottom:16px;font-size:10px;letter-spacing:.18em;opacity:.35;z-index:30}
+    .body{position:absolute;left:0;top:0;will-change:transform;user-select:none;transform-origin:center;opacity:0;transition:opacity .25s;pointer-events:none}
+    .ready .body{opacity:1}.intro-blur .body{filter:blur(5px)}.image{width:clamp(145px,14.61vw,280.5px);aspect-ratio:1;border-radius:10.32px;overflow:hidden;background:var(--soft);box-shadow:0 15px 38px rgba(0,0,0,.11)}
+    .image img{width:calc(100% + 2px);height:calc(100% + 2px);margin:-1px;display:block;object-fit:cover;pointer-events:none;border-radius:inherit}.title{height:clamp(86px,7.62vw,146.39px);display:grid;place-items:center;border-radius:9.93px;color:white;font-size:clamp(47px,4.27vw,81.88px);font-weight:500;white-space:nowrap}
+    .ui{width:clamp(225px,18.48vw,354.81px);background:#080808}.name{width:clamp(320px,27.01vw,518.57px);background:var(--violet)}
+    .experience{width:clamp(300px,31vw,430px);min-height:124px;border-radius:10px;padding:22px 28px;display:flex;flex-direction:column;gap:10px}.experience strong{font-size:19px}.experience span{font-size:14px;line-height:1.5}.yellow{background:var(--yellow)}.dark{background:#080808;color:white}
+    .statement{width:clamp(350px,35vw,490px);min-height:112px;border-radius:11px;padding:25px 30px;background:#080808;color:white;font-size:15px;line-height:1.65;text-align:center}.statement b{color:var(--yellow)}
+    .tag{height:50px;padding:0 20px;border-radius:5px;background:#f0f0f0;display:grid;place-items:center;font-size:25px;white-space:nowrap}
+    .cursor-mark{position:absolute;left:0;top:0;z-index:80;width:500px;height:150px;display:grid;place-items:center;pointer-events:none;mix-blend-mode:difference;color:#fff;font:96px/1 "Yesteryear",cursive;white-space:nowrap;transform-origin:center;will-change:transform;filter:none}
+    @media(max-width:720px){header{height:66px;padding:13px 16px 0}.signature{font-size:25px}nav{gap:12px;font-size:10px}nav a:after{bottom:24px}#hero{height:calc(100svh - 66px)}.image{width:108px}.title{height:72px;font-size:39px}.ui{width:170px}.name{width:240px}.experience{width:260px;min-height:96px;padding:14px 17px}.experience strong{font-size:15px}.experience span,.statement{font-size:11px}.statement{width:290px;min-height:82px;padding:15px}.hint{display:none}}
+  </style>
+</head>
+<body>
+  <header><div class="signature">WangRuihan</div><nav><a href="#">HOME</a><a href="#">WORKS</a><a href="#">ABOUT</a><a href="#">CONTACT</a></nav></header>
+  <main id="hero" aria-label="Interactive portfolio introduction">
+    <div class="hint">MOVE YOUR CURSOR · PLAY WITH THE WORK</div>
+    <div class="cursor-mark" aria-hidden="true">WangRuihan</div>
+    <div class="body image"><img src="../portfolio/card-01.png" alt="AIGC character design"></div>
+    <div class="body image"><img src="../portfolio/card-02-bg.png" alt="Mobile product design"></div>
+    <div class="body image"><img src="../portfolio/card-03.png" alt="Playful visual design"></div>
+    <div class="body image"><img src="../portfolio/card-04.png" alt="AI creation interface"></div>
+    <div class="body image"><img src="../portfolio/card-05.svg" alt="AI game character"></div>
+    <div class="body image"><img src="../portfolio/card-06.png" alt="Creative workflow"></div>
+    <div class="body title ui">UI/UX</div><div class="body title name">王睿晗</div>
+    <div class="body experience yellow"><strong>百度 AIGC 设计实习</strong><span>多模态内容生成、视觉优化与 AI 创作工作流</span></div>
+    <div class="body experience dark"><strong>盛趣 AI 产品设计实习</strong><span>AI 小游戏从 0 到 1 的产品设计与核心创作体验</span></div>
+    <div class="body statement">从 <b>AIGC 内容</b>生成到 <b>AI 产品设计</b><br>持续积累 AI 体验、设计系统与工作流相关实践</div>
+    <div class="body tag">AIGC</div><div class="body tag">AI product design</div><div class="body tag">Playful</div>
+  </main>
+  <script src="../vendor/matter.min.js"></script>
+  <script>
+    const {Engine,Bodies,Body,Composite,Runner,Events,Query,Vector}=Matter;
+    const hero=document.querySelector('#hero');const cursorMark=document.querySelector('.cursor-mark');const elements=[...document.querySelectorAll('.body')];
+    let W=hero.clientWidth,H=hero.clientHeight;const engine=Engine.create({positionIterations:32,velocityIterations:24,constraintIterations:8,enableSleeping:false});engine.gravity.y=.72;
+    const wallSize=120;let walls=[];const makeWalls=()=>{if(walls.length)Composite.remove(engine.world,walls);walls=[Bodies.rectangle(W/2,H+wallSize/2-2,W+wallSize*2,wallSize,{isStatic:true,friction:.8}),Bodies.rectangle(-wallSize/2+2,H/2,wallSize,H*3,{isStatic:true}),Bodies.rectangle(W+wallSize/2-2,H/2,wallSize,H*3,{isStatic:true}),Bodies.rectangle(W/2,-wallSize/2,W+wallSize*2,wallSize,{isStatic:true})];Composite.add(engine.world,walls)};makeWalls();
+    const collisionGap=14;
+    const layout=[
+      [.118,.165],[.271,.165],[.424,.165],[.577,.165],[.730,.165],[.883,.165],
+      [.340,.396],[.573,.396],
+      [.377,.561],[.592,.561],
+      [.494,.712],
+      [.388,.813],[.488,.813],[.599,.813]
+    ];
+    const releasePattern=[
+      [-.92,-.020,-.070], [.56,.018,.045], [-.48,-.016,-.055], [.82,.021,.072], [-.67,-.019,-.062], [.44,.015,.038],
+      [-.72,-.018,-.060], [.64,.020,.052],
+      [-.51,-.016,-.047], [.76,.019,.065],
+      [-.38,-.013,-.035],
+      [.42,.014,.030], [-.59,-.017,-.048], [.61,.018,.050]
+    ];
+    const items=elements.map((el,i)=>{const r=el.getBoundingClientRect(),w=r.width,h=r.height,bw=w+collisionGap,bh=h+collisionGap;const [rx,ry]=layout[i];const x=Math.max(bw/2+8,Math.min(W-bw/2-8,W*rx));const y=Math.max(bh/2+8,Math.min(H-bh/2-8,H*ry));const body=Bodies.rectangle(x,y,bw,bh,{restitution:.05,friction:.78,frictionStatic:1.02,frictionAir:.032,density:.0035,slop:0});Body.setAngle(body,0);return{el,body,w,h,bw,bh,added:true,release:releasePattern[i]}});
+    Composite.add(engine.world,items.map(item=>item.body));
+    let pointer={x:-999,y:-999,lastX:-999,lastY:-999,time:0};let mark={x:W*.18,y:H*.18,targetX:W*.18,targetY:H*.18,scale:1,targetScale:1,rotation:-.035,targetRotation:-.035,vx:.68,vy:.46,docked:false,resumeTimer:0};
+    const dockMark=()=>{mark.docked=true;mark.targetX=W-205;mark.targetY=-32;mark.targetScale=.34;mark.targetRotation=0;cursorMark.classList.remove('is-active');clearTimeout(mark.resumeTimer);mark.resumeTimer=setTimeout(()=>{mark.docked=false;mark.targetScale=1;cursorMark.classList.add('is-active')},1300)};
+    const animateMark=()=>{
+      if(!mark.docked){
+        mark.targetX+=mark.vx;mark.targetY+=mark.vy;
+        const maxX=Math.max(0,W-500),maxY=Math.max(0,H-150);
+        if(mark.targetX<0){mark.targetX=0;mark.vx=Math.abs(mark.vx)}else if(mark.targetX>maxX){mark.targetX=maxX;mark.vx=-Math.abs(mark.vx)}
+        if(mark.targetY<0){mark.targetY=0;mark.vy=Math.abs(mark.vy)}else if(mark.targetY>maxY){mark.targetY=maxY;mark.vy=-Math.abs(mark.vy)}
+        mark.targetRotation=Math.atan2(mark.vy,mark.vx)*.045;
+      }
+      mark.x+=(mark.targetX-mark.x)*.075;mark.y+=(mark.targetY-mark.y)*.075;mark.scale+=(mark.targetScale-mark.scale)*.09;mark.rotation+=(mark.targetRotation-mark.rotation)*.07;
+      cursorMark.style.transform=`translate3d(${mark.x}px,${mark.y}px,0) scale(${mark.scale}) rotate(${mark.rotation}rad)`;requestAnimationFrame(animateMark)
+    };cursorMark.classList.add('is-active');animateMark();
+    hero.addEventListener('pointermove',e=>{const rect=hero.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,dx=x-pointer.x,dy=y-pointer.y,speed=Math.hypot(dx,dy);pointer={x,y,lastX:pointer.x,lastY:pointer.y,time:performance.now()};dockMark();if(speed<1.2)return;const nearby=Query.region(items.filter(x=>x.added).map(x=>x.body),{min:{x:x-58,y:y-58},max:{x:x+58,y:y+58}});nearby.forEach(body=>{const away=Vector.normalise({x:body.position.x-x,y:body.position.y-y});const impulse=Math.min(speed,32)*body.mass*.00135;Body.applyForce(body,{x,y},{x:away.x*impulse+dx*body.mass*.00018,y:away.y*impulse+dy*body.mass*.00018});const lever=(x-body.position.x)*dy-(y-body.position.y)*dx;Body.setAngularVelocity(body,Math.max(-.09,Math.min(.09,body.angularVelocity+lever*.000012)))})});
+    hero.addEventListener('pointerleave',()=>{pointer.x=-999;pointer.y=-999});
+    window.addEventListener('resize',()=>{W=hero.clientWidth;H=hero.clientHeight;makeWalls()});
+    Events.on(engine,'beforeUpdate',()=>items.forEach(({body,added})=>{if(!added)return;if(Math.abs(body.angularVelocity)>.075)Body.setAngularVelocity(body,Math.sign(body.angularVelocity)*.075);if(Math.abs(body.angularVelocity)<.00012)Body.setAngularVelocity(body,0);if(body.position.x<0||body.position.x>W||body.position.y<0||body.position.y>H)Body.setPosition(body,{x:Math.max(body.bounds.max.x-body.position.x+2,Math.min(W-(body.position.x-body.bounds.min.x)-2,body.position.x)),y:Math.max(body.bounds.max.y-body.position.y+2,Math.min(H-(body.position.y-body.bounds.min.y)-2,body.position.y))})}));
+    Events.on(engine,'afterUpdate',()=>items.forEach(({el,body,w,h,added})=>{if(added)el.style.transform=`translate3d(${body.position.x-w/2}px,${body.position.y-h/2}px,0) rotate(${body.angle}rad)`}));
+    engine.gravity.y=0;
+    const runner=Runner.create({delta:1000/120,isFixed:true,maxUpdates:240});Runner.run(runner,engine);hero.classList.add('ready');hero.classList.add('intro-blur');
+    setTimeout(()=>{
+      engine.gravity.y=.72;
+      hero.classList.remove('intro-blur');
+      items.forEach(({body,release})=>{
+        const [horizontal,spin,angle]=release;
+        Body.setAngle(body,angle);
+        Body.setVelocity(body,{x:horizontal,y:.05});
+        Body.setAngularVelocity(body,spin);
+      });
+    },300);
+  </script>
+</body>
+</html>
